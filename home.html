@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart - Online Shopping Site</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="icon" type="image/x-icon" href="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/favicon.ico">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="header">
+        <div class="container">
+            <div class="navbar">
+                <!-- Logo (links to home page) -->
+                <div class="logo" onclick="window.location.href='home.html'" style="cursor: pointer;">
+                    <div class="logo-container">
+                        <span class="logo-text">Flipkart</span>
+                        <div class="logo-subtext">
+                            <span class="explore">Explore</span>
+                            <span class="plus">Plus</span>
+                            <span class="plus-icon">+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for products, brands and more" class="search-input">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+                <!-- Right side buttons with proper links -->
+                <div class="nav-buttons">
+                    <!-- Profile page - index.html (as per your spec) -->
+                    <div class="nav-btn" onclick="window.location.href='index.html'">
+                        <i class="fas fa-user"></i>
+                        <span>Profile</span>
+                    </div>
+                    
+                    <!-- Seller page - index.html (as placeholder) -->
+                    <div class="nav-btn" onclick="window.location.href='index.html'">
+                        <i class="fas fa-store"></i>
+                        <span>Become a Seller</span>
+                    </div>
+                    
+                    <!-- Orders page - orders.html -->
+                    <div class="nav-btn" onclick="window.location.href='orders.html'">
+                        <i class="fas fa-ellipsis-h"></i>
+                        <span>Orders</span>
+                    </div>
+                    
+                    <!-- Cart page - danufiles-cart.html -->
+                    <div class="nav-btn cart-btn" onclick="window.location.href='danufiles-cart.html'">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Cart</span>
+                        <span class="cart-count">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Banner Slider -->
+        <section class="banner-section">
+            <div class="container">
+                <div class="banner-slider">
+                    <div class="slides-container">
+                        <!-- Banner 1 - links to product page -->
+                        <div class="slide active" onclick="window.location.href='product.html?pid=1'" style="cursor: pointer;">
+                            <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Banner 1">
+                            <div class="slide-content">
+                                <h2>Big Billion Days</h2>
+                                <p>Up to 70% Off on Electronics</p>
+                            </div>
+                        </div>
+                        <!-- Banner 2 - links to product page -->
+                        <div class="slide" onclick="window.location.href='product.html?pid=3'" style="cursor: pointer;">
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Banner 2">
+                            <div class="slide-content">
+                                <h2>Fashion Sale</h2>
+                                <p>Min 50% Off on Clothing</p>
+                            </div>
+                        </div>
+                        <!-- Banner 3 - links to product page -->
+                        <div class="slide" onclick="window.location.href='product.html?pid=4'" style="cursor: pointer;">
+                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Banner 3">
+                            <div class="slide-content">
+                                <h2>Home & Kitchen</h2>
+                                <p>Flat 40% Off</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-btn prev-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-btn next-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="slider-dots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Section -->
+        <section class="category-section">
+            <div class="container">
+                <h2 class="section-title">Shop By Category</h2>
+                <div class="categories-grid" id="categories-grid">
+                    <!-- Categories will be populated by JavaScript with links -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section">
+            <div class="container">
+                <h2 class="section-title">Top Deals</h2>
+                <div class="products-grid" id="products-grid">
+                    <!-- Products will be populated by JavaScript with links -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer with links to all modules -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Flipkart</h3>
+                    <p>Online shopping made easy with India's largest marketplace</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p onclick="window.location.href='home.html'" style="cursor: pointer;">Home</p>
+                    <p onclick="window.location.href='orders.html'" style="cursor: pointer;">My Orders</p>
+                    <p onclick="window.location.href='index.html'" style="cursor: pointer;">My Profile</p>
+                    <p onclick="window.location.href='danufiles-cart.html'" style="cursor: pointer;">Cart</p>
+                    <p onclick="window.location.href='danufiles-checkout.html'" style="cursor: pointer;">Checkout</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: support@flipkart.com</p>
+                    <p>Phone: 1800-202-9898</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Flipkart Clone. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+    <script>
+        // Override the product click handlers in home.js to use actual links
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to update product cards with proper links after home.js renders them
+            function addProductLinks() {
+                const productCards = document.querySelectorAll('.product-card');
+                const products = [
+                    { id: 1, name: "Apple iPhone 14 Pro", price: 129999 },
+                    { id: 2, name: "Samsung 55-inch 4K Ultra HD Smart LED TV", price: 54999 },
+                    { id: 3, name: "Nike Air Max 270 React Running Shoes", price: 5499 },
+                    { id: 4, name: "Milton Thermosteel Flip Lid Bottle, 1 Litre", price: 799 },
+                    { id: 5, name: "Bajaj 1200W Toaster Grill", price: 1999 },
+                    { id: 6, name: "HP Pavilion Gaming Laptop", price: 72990 },
+                    { id: 7, name: "Men's Casual Checkered Shirt", price: 899 },
+                    { id: 8, name: "Sony WH-1000XM4 Headphones", price: 22999 }
+                ];
+                
+                productCards.forEach((card, index) => {
+                    if (index < products.length) {
+                        // Remove any existing click listeners
+                        card.style.cursor = 'pointer';
+                        card.onclick = function(e) {
+                            e.preventDefault();
+                            window.location.href = `product.html?pid=${products[index].id}`;
+                        };
+                    }
+                });
+            }
+
+            // Run initially
+            setTimeout(addProductLinks, 100);
+            
+            // Also run after any dynamic updates
+            const observer = new MutationObserver(function() {
+                addProductLinks();
+            });
+            
+            const productsGrid = document.getElementById('products-grid');
+            if (productsGrid) {
+                observer.observe(productsGrid, { childList: true, subtree: true });
+            }
+
+            // Update category cards with links
+            function addCategoryLinks() {
+                const categoryCards = document.querySelectorAll('.category-card');
+                const categories = [
+                    "Mobiles", "Fashion", "Electronics", "Home", 
+                    "Appliances", "Travel", "Beauty", "Grocery", "Toys", "Furniture"
+                ];
+                
+                categoryCards.forEach((card, index) => {
+                    if (index < categories.length) {
+                        card.style.cursor = 'pointer';
+                        card.onclick = function() {
+                            window.location.href = `product.html?category=${categories[index].toLowerCase()}`;
+                        };
+                    }
+                });
+            }
+            
+            setTimeout(addCategoryLinks, 100);
+            
+            // Update cart count to show something (optional)
+            const cartCount = document.querySelector('.cart-count');
+            if (cartCount) {
+                cartCount.textContent = '3'; // Just for demo
+            }
+        });
+    </script>
+</body>
+</html>
