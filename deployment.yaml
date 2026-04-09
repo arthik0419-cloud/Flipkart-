@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flipkart-container
-        image: haritha23mis0008/flipkart-demo:latest
+        image: shalinisiva/flipkart-app:latest
         ports:
         - containerPort: 80
 ---
