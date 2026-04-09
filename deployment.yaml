@@ -14,11 +14,9 @@ spec:
     spec:
       containers:
       - name: flipkart-container
-        image: flipkart-app:latest
-        imagePullPolicy: Never
+        image: 9385560319/flipkart-demo:latest
         ports:
         - containerPort: 80
-
 ---
 apiVersion: v1
 kind: Service
