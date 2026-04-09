@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flipkart-container
-        image: arthikanns/flipkart-demo:latest
+        image: your-dockerhub-username/flipkart-demo:latest
         ports:
         - containerPort: 80
 ---
@@ -30,4 +30,4 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
-      nodePort: 30007   # Same port as in your PDF!
+      nodePort: 30007
