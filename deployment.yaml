@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flipkart-container
-        image: your-dockerhub-username/flipkart-demo:latest
+        image: arthikanns/flipkart-demo:latest
         ports:
         - containerPort: 80
 ---
